@@ -27,4 +27,11 @@ describe('LoginComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should form rendering screen login', () => {
+    const spyCreateForm = spyOn(component, "createForm")
+    component.createForm();
+    expect(spyCreateForm).toHaveBeenCalled();
+  });
 });
+ 
